@@ -1,0 +1,83 @@
+:root {
+  --bg-main: #f9fafb;
+  --bg-sidebar: #ffffff;
+  --bg-player: #ffffff;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #2563eb;
+  --hover: #f3f4f6;
+}
+[data-theme='dark'] {
+  --bg-main: #121212;
+  --bg-sidebar: #000000;
+  --bg-player: #181818;
+  --text-main: #ffffff;
+  --text-muted: #a3a3a3;
+  --border: #272727;
+  --primary: #1db954; /* Màu xanh Spotify */
+  --hover: #2a2a2a;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s, color 0.3s;
+}
+.song-row {
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+.song-row:hover {
+  background-color: var(--hover);
+}
+.btn-icon {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: color 0.2s, transform 0.2s;
+}
+.btn-icon:hover {
+  color: var(--text-main);
+  transform: scale(1.1);
+}
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.1s;
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+.btn-primary:active {
+  transform: scale(0.96);
+}
+.input-field {
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 10px 12px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+.input-field:focus {
+  border-color: var(--primary);
+}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
